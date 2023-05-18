@@ -1,0 +1,1755 @@
+Index: src/base/file1.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/base/file1.txt b/src/base/file1.txt
+new file mode 100644
+--- /dev/null	(date 1683385582350)
++++ b/src/base/file1.txt	(date 1683385582350)
+@@ -0,0 +1,3 @@
++Hello World
++I'm Oleg
++What wrong with this alghorithms????
+Index: src/base/file2.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/base/file2.txt b/src/base/file2.txt
+new file mode 100644
+--- /dev/null	(date 1683385582339)
++++ b/src/base/file2.txt	(date 1683385582339)
+@@ -0,0 +1,121 @@
++[Patient{ 
++ id=19,
++ name='Дмитро',
++ surname='Гришко',
++ father='Олегович',
++ address='вул.Небесної Сотні  93',
++ diagnose='Пневмонія',
++ phone=0766436212,
++ id_card=53}, Patient{ 
++ id=58,
++ name='Павло',
++ surname='Гришко',
++ father='Вікторович',
++ address='б.Шевченка  6',
++ diagnose='Набряк',
++ phone=0508112604,
++ id_card=11}, Patient{ 
++ id=24,
++ name='Гасан',
++ surname='Подоляк',
++ father='Вікторович',
++ address='вул.Олени Пчілки  24',
++ diagnose='Черепно-мозкова травма',
++ phone=0761821229,
++ id_card=48}, Patient{ 
++ id=70,
++ name='Петро',
++ surname='Порошонявський',
++ father='Дмитрович',
++ address='вул.Олени Пчілки  87',
++ diagnose='Пневмонія',
++ phone=0991358771,
++ id_card=99}, Patient{ 
++ id=84,
++ name='Петро',
++ surname='Шматко',
++ father='Ганьбович',
++ address='провулок Сагайдачного  63',
++ diagnose='ОРВІ',
++ phone=0952140419,
++ id_card=9}, Patient{ 
++ id=14,
++ name='Василь',
++ surname='Подоляк',
++ father='Вікторович',
++ address='провулок Сагайдачного  90',
++ diagnose='Черепно-мозкова травма',
++ phone=0954146855,
++ id_card=37}, Patient{ 
++ id=76,
++ name='Павло',
++ surname='Вольдемар',
++ father='Дмитрович',
++ address='б.Шевченка  58',
++ diagnose='Пневмонія',
++ phone=0762666443,
++ id_card=59}, Patient{ 
++ id=71,
++ name='Василь',
++ surname='Шматко',
++ father='Ганьбович',
++ address='б.Шевченка  71',
++ diagnose='ОРВІ',
++ phone=0666930024,
++ id_card=64}, Patient{ 
++ id=80,
++ name='Петро',
++ surname='Вольдемар',
++ father='Дмитрович',
++ address='вул.Олени Пчілки  55',
++ diagnose='Пневмонія',
++ phone=0997729709,
++ id_card=9}, Patient{ 
++ id=74,
++ name='Гасан',
++ surname='Порошонявський',
++ father='Ганьбович',
++ address='проспект Перемоги  60',
++ diagnose='ОРВІ',
++ phone=0766884962,
++ id_card=61}, Patient{ 
++ id=58,
++ name='Гасан',
++ surname='Подоляк',
++ father='Ганьбович',
++ address='вул.Олени Пчілки  95',
++ diagnose='Пневмонія',
++ phone=0951762785,
++ id_card=16}, Patient{ 
++ id=64,
++ name='Дмитро',
++ surname='Подоляк',
++ father='Ганьбович',
++ address='проспект Перемоги  45',
++ diagnose='Пневмонія',
++ phone=0762326501,
++ id_card=25}, Patient{ 
++ id=3,
++ name='Олег',
++ surname='Порошонявський',
++ father='Вікторович',
++ address='провулок Сагайдачного  44',
++ diagnose='ОРВІ',
++ phone=0952754021,
++ id_card=19}, Patient{ 
++ id=89,
++ name='Дмитро',
++ surname='Подоляк',
++ father='Вікторович',
++ address='провулок Сагайдачного  26',
++ diagnose='Черепно-мозкова травма',
++ phone=0505139198,
++ id_card=68}, Patient{ 
++ id=61,
++ name='Дмитро',
++ surname='Шматко',
++ father='Олегович',
++ address='проспект Перемоги  20',
++ diagnose='Черепно-мозкова травма',
++ phone=0761835074,
++ id_card=65}]
+\ No newline at end of file
+Index: src/base/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/base/Main.java b/src/base/Main.java
+new file mode 100644
+--- /dev/null	(date 1683385582320)
++++ b/src/base/Main.java	(date 1683385582320)
+@@ -0,0 +1,157 @@
++package base;
++
++import java.io.*;
++import java.util.ArrayList;
++import java.util.Arrays;
++import java.util.Scanner;
++
++public class Main {
++
++    public static void main(String[] args) throws IOException {
++
++        RandomComplete randomComplete = new RandomComplete();
++
++        //Пацієнт:
++        //Ідентифікаційний номер, Прізвище, Ім’я, По батькові, Адреса, Телефон, Номер медичної картки, Діагноз.
++        //Конструктор, Методи доступу, Метод toString()
++/*
++        Patient[] patients = new Patient[15];
++        for(int i =0; i<15; i++){
++            patients[i] = new Patient();
++            randomComplete.randomPatients(patients[i]);
++        }*/
++
++        //ArrayList<Patient> list=new ArrayList<Patient>();//Creating arraylist
++        //Patient[] patients = new Patient[15];
++        ArrayList<Patient> list=new ArrayList<Patient>();//Creating arraylist
++        for(int i =0; i<15; i++){
++            list.add(new Patient());
++         //   randomComplete.randomPatients(patients[i]);
++        }
++
++        /*Patient patient_2 = new Patient(
++                11,
++                "Sanya",
++                "Poltava",
++                "vanyachevski",
++                "Autostation",
++                22911,
++                190,
++                "Lug Cancer");
++        Patient patient_3 = new Patient(
++                7,
++                "Viktor",
++                "Poltava",
++                "olegovich",
++                " school",
++                11911,
++                117,
++                "Lug Cancer");
++        Patient patient_4 = new Patient(
++                29,
++                "Petro",
++                "Poroshenko",
++                "Aligatorovich",
++                "school",
++                85911,
++                129,
++                "Lug Cancer");*/
++
++
++        ViewConsole viewConsole = new ViewConsole();
++        viewConsole.responseStart();
++        Scanner scanner = new Scanner(System.in);
++        for(int response = scanner.nextInt(); response != 0;) {
++            switch (response) {
++                case 1:
++                    viewConsole.view1(list);
++                    viewConsole.responseStart();
++                    response = scanner.nextInt();
++                    viewConsole.responseClear();
++                    break;
++
++                case 2:
++                    viewConsole.view2(list);
++                    viewConsole.responseStart();
++                    response = scanner.nextInt();
++                    viewConsole.responseClear();
++                    break;
++
++                case 3:
++                    System.out.println("Введіть слово для пошуку" +
++                            "\n" +
++                            "      або введіть");
++                    viewConsole.responseStart();
++                    Scanner scannerString = new Scanner(System.in);
++                    String searchValue = scannerString.nextLine();
++                    viewConsole.viewSearch(list, searchValue);
++                    viewConsole.responseStart();
++                    response = scanner.nextInt();
++                    break;
++
++                case 4:
++                    System.out.println("Введіть діапазон через Enter для пошуку" +
++                            "\n" +
++                            "   ");
++                    Scanner scannerIntFrom = new Scanner(System.in);
++                    System.out.println("Пошук від-");
++                    int intFrom = scannerIntFrom.nextInt();
++                    if(intFrom <0){
++                        throw new IllegalStateException("Спробуйте знову:  значення не може бути менше 0" );
++                    }
++                    Scanner scannerIntTo = new Scanner(System.in);
++                    System.out.println("Пошук до-");
++                    int intTo = scannerIntTo.nextInt();
++                    if(intTo < intFrom){
++                        throw new IllegalStateException("Спробуйте знову: Значення пошуку (Від) повинно бути менше за (До) " );
++                    }
++                    viewConsole.viewSearchCard(list, intFrom, intTo);
++
++                    viewConsole.responseStart();
++                    response = scanner.nextInt();
++                    break;
++
++                case 5:
++                    FileReader fileReader = new FileReader("src/base/file2.txt");
++                    Scanner fileScann = new Scanner(fileReader);
++                    StringBuilder value = new StringBuilder();
++                    while(fileScann.hasNextLine()){
++                        value.append(fileScann.nextLine());
++                    }
++                    fileScann.close();
++                    ParseFile parsing = new ParseFile();
++                    //System.out.println(value.toString());
++                    parsing.parseFile(value.toString(), list);
++                    //System.out.println(Arrays.toString(patients));
++                    viewConsole.responseStart();
++                    response = scanner.nextInt();
++                    break;
++
++                case 6:
++                    FileWriter fileWriter = new FileWriter("src/base/file2.txt");
++                    fileWriter.write(list.toString());
++                    fileWriter.close();
++                    viewConsole.responseStart();
++                    response = scanner.nextInt();
++                    break;
++
++                case 7:
++                    for(int i=0; i<list.size();i++) {
++                        randomComplete.randomPatients(list.get(i));
++                    }
++                    viewConsole.responseStart();
++                    response = scanner.nextInt();
++                    break;
++
++                default:
++                    throw new IllegalStateException("Спробуйте знову: Введіть цифру із запропонованих");
++            }
++        }
++        viewConsole.responseClear();
++        System.out.println("Вихід");
++
++
++
++	// write your code here
++    }
++}
+Index: src/base/Patient.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/base/Patient.java b/src/base/Patient.java
+new file mode 100644
+--- /dev/null	(date 1683385582367)
++++ b/src/base/Patient.java	(date 1683385582367)
+@@ -0,0 +1,104 @@
++package base;
++
++public class Patient {
++        //Ідентифікаційний номер, Прізвище, Ім’я, По батькові, Адреса, Телефон, Номер медичної картки, Діагноз.
++        //Конструктор, Методи доступу, Метод toString()
++    private String name, surname, father, address, diagnose, phone;
++    private int id, id_card;
++    /*public Patient(int id,
++                   String name,
++                   String surname,
++                   String father,
++                   String address,
++                   int phone,
++                   int id_card,
++                   String diagnose){
++        this.id = id;
++        this.name = name;
++        this.surname = surname;
++        this.father= father;
++        this.address=address;
++        this.phone=phone;
++        this.id_card=id_card;
++        this.diagnose=diagnose;
++    }*/
++
++    public void setAddress(String address) {
++        this.address = address;
++    }
++
++    public void setDiagnose(String diagnose) {
++        this.diagnose = diagnose;
++    }
++
++    public void setFather(String father) {
++        this.father = father;
++    }
++
++    public void setId(int id) {
++        this.id = id;
++    }
++
++    public void setId_card(int id_card) {
++        this.id_card = id_card;
++    }
++
++    public void setName(String name) {
++        this.name = name;
++    }
++
++
++    public void setPhone(String phone) {
++        this.phone = phone;
++    }
++
++    public void setSurname(String surname) {
++        this.surname = surname;
++    }
++
++    public int getId() {
++        return id;
++    }
++
++    public int getId_card() {
++        return id_card;
++    }
++
++    public String getPhone() {
++        return phone;
++    }
++
++    public String getAddress() {
++        return address;
++    }
++
++    public String getDiagnose() {
++        return diagnose;
++    }
++
++    public String getFather() {
++        return father;
++    }
++
++    public String getName() {
++        return name;
++    }
++
++    public String getSurname() {
++        return surname;
++    }
++
++    @Override
++    public String toString() {
++        return "Patient{ \n" +
++                " id=" + id +
++                ",\n name='" + name + '\'' +
++                ",\n surname='" + surname + '\'' +
++                ",\n father='" + father + '\'' +
++                ",\n address='" + address + '\'' +
++                ",\n diagnose='" + diagnose + '\'' +
++                ",\n phone=" + phone +
++                ",\n id_card=" + id_card +
++                '}';
++    }
++}
+Index: src/base/ParseFile.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/base/ParseFile.java b/src/base/ParseFile.java
+new file mode 100644
+--- /dev/null	(date 1683385582359)
++++ b/src/base/ParseFile.java	(date 1683385582359)
+@@ -0,0 +1,112 @@
++package base;
++
++import java.util.ArrayList;
++
++public class ParseFile {
++    public void parseFile(String data, ArrayList<Patient> patients) {
++
++        String data2 = data.replaceAll("Patient", "");
++        data2 = data2.replaceAll("\\[", "");
++
++        data2 = data2.substring(1);
++        String[] patientsData2 = data2.split("\\{");
++        for(int i =0; i< patientsData2.length;i++){
++            String patientData = patientsData2[i];
++
++            int id = Integer.parseInt(patientData.substring(patientData.indexOf("id=") + 3, patientData.indexOf(",")));
++            patients.get(i).setId(id);
++            patientData = patientData.substring(patientData.indexOf(",")+1);
++
++            String name = patientData.substring(patientData.indexOf("name='") + 6, patientData.indexOf("',"));
++            patients.get(i).setName(name);
++            patientData = patientData.substring(patientData.indexOf(",")+1);
++
++            String surname = patientData.substring(patientData.indexOf("surname='") + 9, patientData.indexOf("',"));
++            patients.get(i).setSurname(surname);
++            patientData = patientData.substring(patientData.indexOf(",")+1);
++
++
++            String father = patientData.substring(patientData.indexOf("father='") + 8, patientData.indexOf("',"));
++            patients.get(i).setFather(father);
++            patientData = patientData.substring(patientData.indexOf(",")+1);
++
++            String address = patientData.substring(patientData.indexOf("address='") + 9, patientData.indexOf("',"));
++            patients.get(i).setAddress(address);
++            patientData = patientData.substring(patientData.indexOf(",")+1);
++
++            String diagnose = patientData.substring(patientData.indexOf("diagnose='") + 10, patientData.indexOf("',"));
++            patients.get(i).setDiagnose(diagnose);
++            patientData = patientData.substring(patientData.indexOf(",")+1);
++
++            String phone = patientData.substring(patientData.indexOf("phone=") + 6, patientData.indexOf(","));
++            patients.get(i).setPhone(phone);
++            patientData = patientData.substring(patientData.indexOf(",")+1);
++            //System.out.println(patientData);
++            int id_card = Integer.parseInt(patientData.substring(patientData.indexOf("id_card=") + 8,patientData.length()-3));
++            patients.get(i).setId_card(id_card);
++        }
++
++
++
++
++        /*
++            String patientData = patientsData2[i].substring(prevInd,lastInd);
++
++
++            int id = Integer.parseInt(patientData.substring(patientData.indexOf("id=") + 3, patientData.indexOf(",")));
++            String name = patientData.substring(patientData.indexOf("name='") + 6, patientData.indexOf("',"));
++            String surname = patientData.substring(patientData.indexOf("surname='") + 9, patientData.indexOf("',"));
++            String father = patientData.substring(patientData.indexOf("father='") + 8, patientData.indexOf("',"));
++            String address = patientData.substring(patientData.indexOf("father='") + 8, patientData.indexOf("',"));
++            String diagnose = patientData.substring(patientData.indexOf("diagnose='") + 10, patientData.indexOf("',"));
++            String phone = patientData.substring(patientData.indexOf("phone=") + 6, patientData.indexOf(","));
++            int id_card =Integer.parseInt(patientData.substring(patientData.indexOf("id_card=") + 8));
++
++
++
++            patients[i].setId(Integer.parseInt(patientData.substring(patientData.indexOf("id=") + 3, patientData.indexOf(","))));
++
++            patients[i].setName( patientData.substring(patientData.indexOf("name='") + 6, patientData.indexOf("',")));
++            patients[i].setSurname(patientData.substring(patientData.indexOf("surname='") + 9, patientData.indexOf("',")));
++
++            patients[i].setFather(patientData.substring(patientData.indexOf("father='") + 8, patientData.indexOf("',")));
++
++            patients[i].setAddress(patientData.substring(patientData.indexOf("father='") + 8, patientData.indexOf("',")));
++
++            patients[i].setDiagnose(patientData.substring(patientData.indexOf("diagnose='") + 10, patientData.indexOf("',")));
++
++            patients[i].setPhone(patientData.substring(patientData.indexOf("phone=") + 6, patientData.indexOf(",")));
++
++            patients[i].setId_card(Integer.parseInt(patientData.substring(patientData.indexOf("id_card=") + 8)));
++            */
++                /*
++                String test = data.replaceAll("id=|name=|surname=|father=|address=|diagnose=|phone=|id_card","");
++                String[] patientDataValue = test.split("'|,|\n");
++                for(int k = 0; patientDataValue.length > k;k++) {
++                    System.out.println(k +"    "+ patientDataValue[k]);
++
++
++                i++;
++                prevInd= data2.indexOf("{");
++                //System.out.println(prevInd);
++                lastInd= data2.indexOf("}");
++                */
++
++
++
++                /*patientDataValue[0] = patientData.substring(patientData.indexOf("id="), patientData.indexOf(","));
++                patients[k].setId(Integer.parseInt(patientData.substring(patientData.indexOf("id="), patientData.indexOf(","))));
++
++                patients[k].setId(Integer.parseInt(patientData.substring(patientData.indexOf("id="), patientData.indexOf(","))));
++                patients[k].setId(Integer.parseInt(patientData.substring(patientData.indexOf("id="), patientData.indexOf(","))));
++                patients[k].setId(Integer.parseInt(patientData.substring(patientData.indexOf("id="), patientData.indexOf(","))));
++                patients[k].setId(Integer.parseInt(patientData.substring(patientData.indexOf("id="), patientData.indexOf(","))));
++                patients[k].setId(Integer.parseInt(patientData.substring(patientData.indexOf("id="), patientData.indexOf(","))));
++                patients[k].setId(Integer.parseInt(patientData.substring(patientData.indexOf("id="), patientData.indexOf(","))));
++
++                 */
++
++
++
++    }
++}
+Index: src/base/ViewConsole.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/base/ViewConsole.java b/src/base/ViewConsole.java
+new file mode 100644
+--- /dev/null	(date 1683385582329)
++++ b/src/base/ViewConsole.java	(date 1683385582329)
+@@ -0,0 +1,100 @@
++package base;
++
++import java.util.ArrayList;
++
++public class ViewConsole {
++    String answer;
++
++    public void responseClear(){
++        System.out.println("\n\n\n\n\n\n\n\n\n\n");
++    }
++
++    public void responseStart(){
++        System.out.println("\nВведіть 1 для відображення поточної бази пацієнтів" +
++                "\nВведіть 2 для відображення лише прізвищ та діагнозів" +
++                "\nВведіть 3 для пошуку за словом" +
++                "\nВведіть 4 для пошуку в діапазоні Id карти" +
++                "\nВведіть 5 для створення бази з файлу file2.txt" +
++                "\nВведіть 6 для збереження поточної бази у файл file2.txt"+
++                "\nВведіть 7 для створення нової бази із випадковими данними"+
++                "\nВведіть 0 для виходу");
++    }
++
++    public void view1(ArrayList<Patient> patients){
++        String leftAlignFormat = "| %-4s | %-10s | %-15s | %-15s | %-29s | %-25s| %-14s | %-7d |%n";
++
++        System.out.format("+------+------------+-----------------+-----------------+-------------------------------+-------------------" +
++                "-------+----------------+---------+%n");
++        System.out.format("|  Id  |    Name    |     Surname     |     Father      |             Address           |        Diagnose " +
++                "         |  Phone number  | Id_Card |%n");
++        System.out.format("+------+------------+-----------------+-----------------+-------------------------------+-------------------" +
++                "-------+----------------+---------+%n");
++        for (int i = 0; i < patients.size(); i++) {
++            System.out.format(leftAlignFormat, patients.get(i).getId(), patients.get(i).getName(), patients.get(i).getSurname(), patients.get(i).getFather(),
++                    patients.get(i).getAddress(), patients.get(i).getDiagnose(), patients.get(i).getPhone(), patients.get(i).getId_card()
++            );
++            System.out.format("+------+------------+-----------------+-----------------+-------------------------------+-------------------" +
++                    "-------+----------------+---------+%n");
++        }
++    }
++
++    public void view2(ArrayList<Patient> patients){
++        String leftAlignFormat = "| %-15s | %-24s |%n";
++
++        System.out.format("+-----------------+-------------------" +
++                "-------+%n");
++        System.out.format("|     Surname     |        Diagnose " +
++                "         |%n");
++        System.out.format("+-----------------+-------------------" +
++                "-------+%n");
++        for (int i = 0; i < patients.size(); i++) {
++            System.out.format(leftAlignFormat, patients.get(i).getSurname(), patients.get(i).getDiagnose());
++            System.out.format("+-----------------+-------------------" +
++                    "-------+%n");
++        }
++    }
++
++    public void viewSearch(ArrayList<Patient> patients, String searchValue){
++        String leftAlignFormat = "| %-4s | %-10s | %-15s | %-15s | %-29s | %-25s| %-14s | %-7d |%n";
++
++        System.out.format("+------+------------+-----------------+-----------------+-------------------------------+-------------------" +
++                "-------+----------------+---------+%n");
++        System.out.format("|  Id  |    Name    |     Surname     |     Father      |             Address           |        Diagnose " +
++                "         |  Phone number  | Id_Card |%n");
++        System.out.format("+------+------------+-----------------+-----------------+-------------------------------+-------------------" +
++                "-------+----------------+---------+%n");
++        for (int i = 0; i < patients.size(); i++) {
++            if(patients.get(i).toString().indexOf(searchValue) != -1){
++            System.out.format(leftAlignFormat, patients.get(i).getId(), patients.get(i).getName(), patients.get(i).getSurname(), patients.get(i).getFather(),
++                    patients.get(i).getAddress(), patients.get(i).getDiagnose(), patients.get(i).getPhone(), patients.get(i).getId_card()
++            );
++            System.out.format("+------+------------+-----------------+-----------------+-------------------------------+-------------------" +
++                    "-------+----------------+---------+%n");
++            }
++
++        }
++    }
++
++    public void viewSearchCard(ArrayList<Patient> patients, int intFrom, int intTo) {
++
++        String leftAlignFormat = "| %-4s | %-10s | %-15s | %-15s | %-29s | %-25s| %-14s | %-7d |%n";
++
++        System.out.format("+------+------------+-----------------+-----------------+-------------------------------+-------------------" +
++                "-------+----------------+---------+%n");
++        System.out.format("|  Id  |    Name    |     Surname     |     Father      |             Address           |        Diagnose " +
++                "         |  Phone number  | Id_Card |%n");
++        System.out.format("+------+------------+-----------------+-----------------+-------------------------------+-------------------" +
++                "-------+----------------+---------+%n");
++        for (int i = 0; i < patients.size(); i++) {
++            if((patients.get(i).getId_card() >= intFrom) && (patients.get(i).getId_card() <= intTo)){
++                System.out.format(leftAlignFormat, patients.get(i).getId(), patients.get(i).getName(), patients.get(i).getSurname(), patients.get(i).getFather(),
++                        patients.get(i).getAddress(), patients.get(i).getDiagnose(), patients.get(i).getPhone(), patients.get(i).getId_card()
++                );
++                System.out.format("+------+------------+-----------------+-----------------+-------------------------------+-------------------" +
++                        "-------+----------------+---------+%n");
++            }
++
++        }
++
++    }
++}
+Index: src/base/RandomComplete.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/base/RandomComplete.java b/src/base/RandomComplete.java
+new file mode 100644
+--- /dev/null	(date 1683385582389)
++++ b/src/base/RandomComplete.java	(date 1683385582389)
+@@ -0,0 +1,59 @@
++package base;
++import java.lang.*;
++import java.util.ArrayList;
++
++public class RandomComplete {
++    String[] diseases = {"ОРВІ" ,
++            "Пневмонія" ,
++            "Набряк" ,
++            "Черепно-мозкова травма" ,
++            "Серцева недостатність"};
++
++    String[] names = {"Петро" ,
++            "Василь" ,
++            "Олег" ,
++            "Дмитро" ,
++            "Павло" ,
++            "Гасан" ,
++            "Микита" ,
++            "Ігор"};
++
++    String[] surnames = {"Подоляк" ,
++            "Шматко" ,
++            "Гришко" ,
++            "Вольдемар" ,
++            "Порошонявський" ,
++            "Залізняк" ,
++            "Жулик"};
++
++    String[] fathers = {"Вікторович" ,
++            "Олегович" ,
++            "Ганьбович" ,
++            "Дмитрович" ,
++            "Васильович" ,
++            "Микитович" ,
++            "Іванович"};
++
++    String[] adresses1 = {"б.Шевченка" ,
++            "вул.Олени Пчілки" ,
++            "провулок Сагайдачного" ,
++            "проспект Перемоги" ,
++            "вул.Небесної Сотні" ,
++            "Майдан Незалежності"};
++
++    String[] phoneNumbers = {"095","066","075","050","099","063","076"};
++
++    public void randomPatients(Patient patient){
++        patient.setId(((int) (Math.random()*100)));
++        patient.setName(names[((int)(Math.random()*6))]);
++        patient.setSurname(surnames[(int)(Math.random()*6)]);
++        patient.setDiagnose(diseases[(int)(Math.random()*4)]);
++        patient.setPhone((phoneNumbers[(int)(Math.random()*7)])+Integer.toString((int)(Math.random()*10000000)));
++        if((patient.getPhone()).length() == 9 ){
++            patient.setPhone(patient.getPhone()+"1");
++        }
++        patient.setFather(fathers[(int)(Math.random()*6)]);
++        patient.setAddress(adresses1[(int)(Math.random()*5)]+"  "+Integer.toString((int)(Math.random()*100)) );
++        patient.setId_card((int)(Math.random()*100));
++    }
++}
+Index: src/main/java/base/file1.txt
+===================================================================
+diff --git a/src/main/java/base/file1.txt b/src/main/java/base/file1.txt
+deleted file mode 100644
+--- a/src/main/java/base/file1.txt	
++++ /dev/null	
+@@ -1,3 +0,0 @@
+-Hello World
+-I'm Oleg
+-What wrong with this alghorithms????
+Index: src/main/java/base/file2.txt
+===================================================================
+diff --git a/src/main/java/base/file2.txt b/src/main/java/base/file2.txt
+deleted file mode 100644
+--- a/src/main/java/base/file2.txt	
++++ /dev/null	
+@@ -1,121 +0,0 @@
+-[Patient{ 
+- id=19,
+- name='Дмитро',
+- surname='Гришко',
+- father='Олегович',
+- address='вул.Небесної Сотні  93',
+- diagnose='Пневмонія',
+- phone=0766436212,
+- id_card=53}, Patient{ 
+- id=58,
+- name='Павло',
+- surname='Гришко',
+- father='Вікторович',
+- address='б.Шевченка  6',
+- diagnose='Набряк',
+- phone=0508112604,
+- id_card=11}, Patient{ 
+- id=24,
+- name='Гасан',
+- surname='Подоляк',
+- father='Вікторович',
+- address='вул.Олени Пчілки  24',
+- diagnose='Черепно-мозкова травма',
+- phone=0761821229,
+- id_card=48}, Patient{ 
+- id=70,
+- name='Петро',
+- surname='Порошонявський',
+- father='Дмитрович',
+- address='вул.Олени Пчілки  87',
+- diagnose='Пневмонія',
+- phone=0991358771,
+- id_card=99}, Patient{ 
+- id=84,
+- name='Петро',
+- surname='Шматко',
+- father='Ганьбович',
+- address='провулок Сагайдачного  63',
+- diagnose='ОРВІ',
+- phone=0952140419,
+- id_card=9}, Patient{ 
+- id=14,
+- name='Василь',
+- surname='Подоляк',
+- father='Вікторович',
+- address='провулок Сагайдачного  90',
+- diagnose='Черепно-мозкова травма',
+- phone=0954146855,
+- id_card=37}, Patient{ 
+- id=76,
+- name='Павло',
+- surname='Вольдемар',
+- father='Дмитрович',
+- address='б.Шевченка  58',
+- diagnose='Пневмонія',
+- phone=0762666443,
+- id_card=59}, Patient{ 
+- id=71,
+- name='Василь',
+- surname='Шматко',
+- father='Ганьбович',
+- address='б.Шевченка  71',
+- diagnose='ОРВІ',
+- phone=0666930024,
+- id_card=64}, Patient{ 
+- id=80,
+- name='Петро',
+- surname='Вольдемар',
+- father='Дмитрович',
+- address='вул.Олени Пчілки  55',
+- diagnose='Пневмонія',
+- phone=0997729709,
+- id_card=9}, Patient{ 
+- id=74,
+- name='Гасан',
+- surname='Порошонявський',
+- father='Ганьбович',
+- address='проспект Перемоги  60',
+- diagnose='ОРВІ',
+- phone=0766884962,
+- id_card=61}, Patient{ 
+- id=58,
+- name='Гасан',
+- surname='Подоляк',
+- father='Ганьбович',
+- address='вул.Олени Пчілки  95',
+- diagnose='Пневмонія',
+- phone=0951762785,
+- id_card=16}, Patient{ 
+- id=64,
+- name='Дмитро',
+- surname='Подоляк',
+- father='Ганьбович',
+- address='проспект Перемоги  45',
+- diagnose='Пневмонія',
+- phone=0762326501,
+- id_card=25}, Patient{ 
+- id=3,
+- name='Олег',
+- surname='Порошонявський',
+- father='Вікторович',
+- address='провулок Сагайдачного  44',
+- diagnose='ОРВІ',
+- phone=0952754021,
+- id_card=19}, Patient{ 
+- id=89,
+- name='Дмитро',
+- surname='Подоляк',
+- father='Вікторович',
+- address='провулок Сагайдачного  26',
+- diagnose='Черепно-мозкова травма',
+- phone=0505139198,
+- id_card=68}, Patient{ 
+- id=61,
+- name='Дмитро',
+- surname='Шматко',
+- father='Олегович',
+- address='проспект Перемоги  20',
+- diagnose='Черепно-мозкова травма',
+- phone=0761835074,
+- id_card=65}]
+\ No newline at end of file
+Index: src/main/java/base/Main.java
+===================================================================
+diff --git a/src/main/java/base/Main.java b/src/main/java/base/Main.java
+deleted file mode 100644
+--- a/src/main/java/base/Main.java	
++++ /dev/null	
+@@ -1,156 +0,0 @@
+-package main.java.base;
+-
+-import java.io.*;
+-import java.util.ArrayList;
+-import java.util.Scanner;
+-
+-public class main {
+-
+-    public static void main(String[] args) throws IOException {
+-
+-        RandomComplete randomComplete = new RandomComplete();
+-
+-        //Пацієнт:
+-        //Ідентифікаційний номер, Прізвище, Ім’я, По батькові, Адреса, Телефон, Номер медичної картки, Діагноз.
+-        //Конструктор, Методи доступу, Метод toString()
+-/*
+-        Patient[] patients = new Patient[15];
+-        for(int i =0; i<15; i++){
+-            patients[i] = new Patient();
+-            randomComplete.randomPatients(patients[i]);
+-        }*/
+-
+-        //ArrayList<Patient> list=new ArrayList<Patient>();//Creating arraylist
+-        //Patient[] patients = new Patient[15];
+-        ArrayList<Patient> list=new ArrayList<Patient>();//Creating arraylist
+-        for(int i =0; i<15; i++){
+-            list.add(new Patient());
+-         //   randomComplete.randomPatients(patients[i]);
+-        }
+-
+-        /*Patient patient_2 = new Patient(
+-                11,
+-                "Sanya",
+-                "Poltava",
+-                "vanyachevski",
+-                "Autostation",
+-                22911,
+-                190,
+-                "Lug Cancer");
+-        Patient patient_3 = new Patient(
+-                7,
+-                "Viktor",
+-                "Poltava",
+-                "olegovich",
+-                " school",
+-                11911,
+-                117,
+-                "Lug Cancer");
+-        Patient patient_4 = new Patient(
+-                29,
+-                "Petro",
+-                "Poroshenko",
+-                "Aligatorovich",
+-                "school",
+-                85911,
+-                129,
+-                "Lug Cancer");*/
+-
+-
+-        ViewConsole viewConsole = new ViewConsole();
+-        viewConsole.responseStart();
+-        Scanner scanner = new Scanner(System.in);
+-        for(int response = scanner.nextInt(); response != 0;) {
+-            switch (response) {
+-                case 1:
+-                    viewConsole.view1(list);
+-                    viewConsole.responseStart();
+-                    response = scanner.nextInt();
+-                    viewConsole.responseClear();
+-                    break;
+-
+-                case 2:
+-                    viewConsole.view2(list);
+-                    viewConsole.responseStart();
+-                    response = scanner.nextInt();
+-                    viewConsole.responseClear();
+-                    break;
+-
+-                case 3:
+-                    System.out.println("Введіть слово для пошуку" +
+-                            "\n" +
+-                            "      або введіть");
+-                    viewConsole.responseStart();
+-                    Scanner scannerString = new Scanner(System.in);
+-                    String searchValue = scannerString.nextLine();
+-                    viewConsole.viewSearch(list, searchValue);
+-                    viewConsole.responseStart();
+-                    response = scanner.nextInt();
+-                    break;
+-
+-                case 4:
+-                    System.out.println("Введіть діапазон через Enter для пошуку" +
+-                            "\n" +
+-                            "   ");
+-                    Scanner scannerIntFrom = new Scanner(System.in);
+-                    System.out.println("Пошук від-");
+-                    int intFrom = scannerIntFrom.nextInt();
+-                    if(intFrom <0){
+-                        throw new IllegalStateException("Спробуйте знову:  значення не може бути менше 0" );
+-                    }
+-                    Scanner scannerIntTo = new Scanner(System.in);
+-                    System.out.println("Пошук до-");
+-                    int intTo = scannerIntTo.nextInt();
+-                    if(intTo < intFrom){
+-                        throw new IllegalStateException("Спробуйте знову: Значення пошуку (Від) повинно бути менше за (До) " );
+-                    }
+-                    viewConsole.viewSearchCard(list, intFrom, intTo);
+-
+-                    viewConsole.responseStart();
+-                    response = scanner.nextInt();
+-                    break;
+-
+-                case 5:
+-                    FileReader fileReader = new FileReader("src/base/file2.txt");
+-                    Scanner fileScann = new Scanner(fileReader);
+-                    StringBuilder value = new StringBuilder();
+-                    while(fileScann.hasNextLine()){
+-                        value.append(fileScann.nextLine());
+-                    }
+-                    fileScann.close();
+-                    ParseFile parsing = new ParseFile();
+-                    //System.out.println(value.toString());
+-                    parsing.parseFile(value.toString(), list);
+-                    //System.out.println(Arrays.toString(patients));
+-                    viewConsole.responseStart();
+-                    response = scanner.nextInt();
+-                    break;
+-
+-                case 6:
+-                    FileWriter fileWriter = new FileWriter("src/base/file2.txt");
+-                    fileWriter.write(list.toString());
+-                    fileWriter.close();
+-                    viewConsole.responseStart();
+-                    response = scanner.nextInt();
+-                    break;
+-
+-                case 7:
+-                    for(int i=0; i<list.size();i++) {
+-                        randomComplete.randomPatients(list.get(i));
+-                    }
+-                    viewConsole.responseStart();
+-                    response = scanner.nextInt();
+-                    break;
+-
+-                default:
+-                    throw new IllegalStateException("Спробуйте знову: Введіть цифру із запропонованих");
+-            }
+-        }
+-        viewConsole.responseClear();
+-        System.out.println("Вихід");
+-
+-
+-
+-	// write your code here
+-    }
+-}
+Index: src/main/java/base/Patient.java
+===================================================================
+diff --git a/src/main/java/base/Patient.java b/src/main/java/base/Patient.java
+deleted file mode 100644
+--- a/src/main/java/base/Patient.java	
++++ /dev/null	
+@@ -1,104 +0,0 @@
+-package base;
+-
+-public class Patient {
+-        //Ідентифікаційний номер, Прізвище, Ім’я, По батькові, Адреса, Телефон, Номер медичної картки, Діагноз.
+-        //Конструктор, Методи доступу, Метод toString()
+-    private String name, surname, father, address, diagnose, phone;
+-    private int id, id_card;
+-    /*public Patient(int id,
+-                   String name,
+-                   String surname,
+-                   String father,
+-                   String address,
+-                   int phone,
+-                   int id_card,
+-                   String diagnose){
+-        this.id = id;
+-        this.name = name;
+-        this.surname = surname;
+-        this.father= father;
+-        this.address=address;
+-        this.phone=phone;
+-        this.id_card=id_card;
+-        this.diagnose=diagnose;
+-    }*/
+-
+-    public void setAddress(String address) {
+-        this.address = address;
+-    }
+-
+-    public void setDiagnose(String diagnose) {
+-        this.diagnose = diagnose;
+-    }
+-
+-    public void setFather(String father) {
+-        this.father = father;
+-    }
+-
+-    public void setId(int id) {
+-        this.id = id;
+-    }
+-
+-    public void setId_card(int id_card) {
+-        this.id_card = id_card;
+-    }
+-
+-    public void setName(String name) {
+-        this.name = name;
+-    }
+-
+-
+-    public void setPhone(String phone) {
+-        this.phone = phone;
+-    }
+-
+-    public void setSurname(String surname) {
+-        this.surname = surname;
+-    }
+-
+-    public int getId() {
+-        return id;
+-    }
+-
+-    public int getId_card() {
+-        return id_card;
+-    }
+-
+-    public String getPhone() {
+-        return phone;
+-    }
+-
+-    public String getAddress() {
+-        return address;
+-    }
+-
+-    public String getDiagnose() {
+-        return diagnose;
+-    }
+-
+-    public String getFather() {
+-        return father;
+-    }
+-
+-    public String getName() {
+-        return name;
+-    }
+-
+-    public String getSurname() {
+-        return surname;
+-    }
+-
+-    @Override
+-    public String toString() {
+-        return "Patient{ \n" +
+-                " id=" + id +
+-                ",\n name='" + name + '\'' +
+-                ",\n surname='" + surname + '\'' +
+-                ",\n father='" + father + '\'' +
+-                ",\n address='" + address + '\'' +
+-                ",\n diagnose='" + diagnose + '\'' +
+-                ",\n phone=" + phone +
+-                ",\n id_card=" + id_card +
+-                '}';
+-    }
+-}
+Index: src/main/java/base/ParseFile.java
+===================================================================
+diff --git a/src/main/java/base/ParseFile.java b/src/main/java/base/ParseFile.java
+deleted file mode 100644
+--- a/src/main/java/base/ParseFile.java	
++++ /dev/null	
+@@ -1,112 +0,0 @@
+-package base;
+-
+-import java.util.ArrayList;
+-
+-public class ParseFile {
+-    public void parseFile(String data, ArrayList<Patient> patients) {
+-
+-        String data2 = data.replaceAll("Patient", "");
+-        data2 = data2.replaceAll("\\[", "");
+-
+-        data2 = data2.substring(1);
+-        String[] patientsData2 = data2.split("\\{");
+-        for(int i =0; i< patientsData2.length;i++){
+-            String patientData = patientsData2[i];
+-
+-            int id = Integer.parseInt(patientData.substring(patientData.indexOf("id=") + 3, patientData.indexOf(",")));
+-            patients.get(i).setId(id);
+-            patientData = patientData.substring(patientData.indexOf(",")+1);
+-
+-            String name = patientData.substring(patientData.indexOf("name='") + 6, patientData.indexOf("',"));
+-            patients.get(i).setName(name);
+-            patientData = patientData.substring(patientData.indexOf(",")+1);
+-
+-            String surname = patientData.substring(patientData.indexOf("surname='") + 9, patientData.indexOf("',"));
+-            patients.get(i).setSurname(surname);
+-            patientData = patientData.substring(patientData.indexOf(",")+1);
+-
+-
+-            String father = patientData.substring(patientData.indexOf("father='") + 8, patientData.indexOf("',"));
+-            patients.get(i).setFather(father);
+-            patientData = patientData.substring(patientData.indexOf(",")+1);
+-
+-            String address = patientData.substring(patientData.indexOf("address='") + 9, patientData.indexOf("',"));
+-            patients.get(i).setAddress(address);
+-            patientData = patientData.substring(patientData.indexOf(",")+1);
+-
+-            String diagnose = patientData.substring(patientData.indexOf("diagnose='") + 10, patientData.indexOf("',"));
+-            patients.get(i).setDiagnose(diagnose);
+-            patientData = patientData.substring(patientData.indexOf(",")+1);
+-
+-            String phone = patientData.substring(patientData.indexOf("phone=") + 6, patientData.indexOf(","));
+-            patients.get(i).setPhone(phone);
+-            patientData = patientData.substring(patientData.indexOf(",")+1);
+-            //System.out.println(patientData);
+-            int id_card = Integer.parseInt(patientData.substring(patientData.indexOf("id_card=") + 8,patientData.length()-3));
+-            patients.get(i).setId_card(id_card);
+-        }
+-
+-
+-
+-
+-        /*
+-            String patientData = patientsData2[i].substring(prevInd,lastInd);
+-
+-
+-            int id = Integer.parseInt(patientData.substring(patientData.indexOf("id=") + 3, patientData.indexOf(",")));
+-            String name = patientData.substring(patientData.indexOf("name='") + 6, patientData.indexOf("',"));
+-            String surname = patientData.substring(patientData.indexOf("surname='") + 9, patientData.indexOf("',"));
+-            String father = patientData.substring(patientData.indexOf("father='") + 8, patientData.indexOf("',"));
+-            String address = patientData.substring(patientData.indexOf("father='") + 8, patientData.indexOf("',"));
+-            String diagnose = patientData.substring(patientData.indexOf("diagnose='") + 10, patientData.indexOf("',"));
+-            String phone = patientData.substring(patientData.indexOf("phone=") + 6, patientData.indexOf(","));
+-            int id_card =Integer.parseInt(patientData.substring(patientData.indexOf("id_card=") + 8));
+-
+-
+-
+-            patients[i].setId(Integer.parseInt(patientData.substring(patientData.indexOf("id=") + 3, patientData.indexOf(","))));
+-
+-            patients[i].setName( patientData.substring(patientData.indexOf("name='") + 6, patientData.indexOf("',")));
+-            patients[i].setSurname(patientData.substring(patientData.indexOf("surname='") + 9, patientData.indexOf("',")));
+-
+-            patients[i].setFather(patientData.substring(patientData.indexOf("father='") + 8, patientData.indexOf("',")));
+-
+-            patients[i].setAddress(patientData.substring(patientData.indexOf("father='") + 8, patientData.indexOf("',")));
+-
+-            patients[i].setDiagnose(patientData.substring(patientData.indexOf("diagnose='") + 10, patientData.indexOf("',")));
+-
+-            patients[i].setPhone(patientData.substring(patientData.indexOf("phone=") + 6, patientData.indexOf(",")));
+-
+-            patients[i].setId_card(Integer.parseInt(patientData.substring(patientData.indexOf("id_card=") + 8)));
+-            */
+-                /*
+-                String test = data.replaceAll("id=|name=|surname=|father=|address=|diagnose=|phone=|id_card","");
+-                String[] patientDataValue = test.split("'|,|\n");
+-                for(int k = 0; patientDataValue.length > k;k++) {
+-                    System.out.println(k +"    "+ patientDataValue[k]);
+-
+-
+-                i++;
+-                prevInd= data2.indexOf("{");
+-                //System.out.println(prevInd);
+-                lastInd= data2.indexOf("}");
+-                */
+-
+-
+-
+-                /*patientDataValue[0] = patientData.substring(patientData.indexOf("id="), patientData.indexOf(","));
+-                patients[k].setId(Integer.parseInt(patientData.substring(patientData.indexOf("id="), patientData.indexOf(","))));
+-
+-                patients[k].setId(Integer.parseInt(patientData.substring(patientData.indexOf("id="), patientData.indexOf(","))));
+-                patients[k].setId(Integer.parseInt(patientData.substring(patientData.indexOf("id="), patientData.indexOf(","))));
+-                patients[k].setId(Integer.parseInt(patientData.substring(patientData.indexOf("id="), patientData.indexOf(","))));
+-                patients[k].setId(Integer.parseInt(patientData.substring(patientData.indexOf("id="), patientData.indexOf(","))));
+-                patients[k].setId(Integer.parseInt(patientData.substring(patientData.indexOf("id="), patientData.indexOf(","))));
+-                patients[k].setId(Integer.parseInt(patientData.substring(patientData.indexOf("id="), patientData.indexOf(","))));
+-
+-                 */
+-
+-
+-
+-    }
+-}
+Index: src/main/java/base/ViewConsole.java
+===================================================================
+diff --git a/src/main/java/base/ViewConsole.java b/src/main/java/base/ViewConsole.java
+deleted file mode 100644
+--- a/src/main/java/base/ViewConsole.java	
++++ /dev/null	
+@@ -1,100 +0,0 @@
+-package base;
+-
+-import java.util.ArrayList;
+-
+-public class ViewConsole {
+-    String answer;
+-
+-    public void responseClear(){
+-        System.out.println("\n\n\n\n\n\n\n\n\n\n");
+-    }
+-
+-    public void responseStart(){
+-        System.out.println("\nВведіть 1 для відображення поточної бази пацієнтів" +
+-                "\nВведіть 2 для відображення лише прізвищ та діагнозів" +
+-                "\nВведіть 3 для пошуку за словом" +
+-                "\nВведіть 4 для пошуку в діапазоні Id карти" +
+-                "\nВведіть 5 для створення бази з файлу file2.txt" +
+-                "\nВведіть 6 для збереження поточної бази у файл file2.txt"+
+-                "\nВведіть 7 для створення нової бази із випадковими данними"+
+-                "\nВведіть 0 для виходу");
+-    }
+-
+-    public void view1(ArrayList<Patient> patients){
+-        String leftAlignFormat = "| %-4s | %-10s | %-15s | %-15s | %-29s | %-25s| %-14s | %-7d |%n";
+-
+-        System.out.format("+------+------------+-----------------+-----------------+-------------------------------+-------------------" +
+-                "-------+----------------+---------+%n");
+-        System.out.format("|  Id  |    Name    |     Surname     |     Father      |             Address           |        Diagnose " +
+-                "         |  Phone number  | Id_Card |%n");
+-        System.out.format("+------+------------+-----------------+-----------------+-------------------------------+-------------------" +
+-                "-------+----------------+---------+%n");
+-        for (int i = 0; i < patients.size(); i++) {
+-            System.out.format(leftAlignFormat, patients.get(i).getId(), patients.get(i).getName(), patients.get(i).getSurname(), patients.get(i).getFather(),
+-                    patients.get(i).getAddress(), patients.get(i).getDiagnose(), patients.get(i).getPhone(), patients.get(i).getId_card()
+-            );
+-            System.out.format("+------+------------+-----------------+-----------------+-------------------------------+-------------------" +
+-                    "-------+----------------+---------+%n");
+-        }
+-    }
+-
+-    public void view2(ArrayList<Patient> patients){
+-        String leftAlignFormat = "| %-15s | %-24s |%n";
+-
+-        System.out.format("+-----------------+-------------------" +
+-                "-------+%n");
+-        System.out.format("|     Surname     |        Diagnose " +
+-                "         |%n");
+-        System.out.format("+-----------------+-------------------" +
+-                "-------+%n");
+-        for (int i = 0; i < patients.size(); i++) {
+-            System.out.format(leftAlignFormat, patients.get(i).getSurname(), patients.get(i).getDiagnose());
+-            System.out.format("+-----------------+-------------------" +
+-                    "-------+%n");
+-        }
+-    }
+-
+-    public void viewSearch(ArrayList<Patient> patients, String searchValue){
+-        String leftAlignFormat = "| %-4s | %-10s | %-15s | %-15s | %-29s | %-25s| %-14s | %-7d |%n";
+-
+-        System.out.format("+------+------------+-----------------+-----------------+-------------------------------+-------------------" +
+-                "-------+----------------+---------+%n");
+-        System.out.format("|  Id  |    Name    |     Surname     |     Father      |             Address           |        Diagnose " +
+-                "         |  Phone number  | Id_Card |%n");
+-        System.out.format("+------+------------+-----------------+-----------------+-------------------------------+-------------------" +
+-                "-------+----------------+---------+%n");
+-        for (int i = 0; i < patients.size(); i++) {
+-            if(patients.get(i).toString().indexOf(searchValue) != -1){
+-            System.out.format(leftAlignFormat, patients.get(i).getId(), patients.get(i).getName(), patients.get(i).getSurname(), patients.get(i).getFather(),
+-                    patients.get(i).getAddress(), patients.get(i).getDiagnose(), patients.get(i).getPhone(), patients.get(i).getId_card()
+-            );
+-            System.out.format("+------+------------+-----------------+-----------------+-------------------------------+-------------------" +
+-                    "-------+----------------+---------+%n");
+-            }
+-
+-        }
+-    }
+-
+-    public void viewSearchCard(ArrayList<Patient> patients, int intFrom, int intTo) {
+-
+-        String leftAlignFormat = "| %-4s | %-10s | %-15s | %-15s | %-29s | %-25s| %-14s | %-7d |%n";
+-
+-        System.out.format("+------+------------+-----------------+-----------------+-------------------------------+-------------------" +
+-                "-------+----------------+---------+%n");
+-        System.out.format("|  Id  |    Name    |     Surname     |     Father      |             Address           |        Diagnose " +
+-                "         |  Phone number  | Id_Card |%n");
+-        System.out.format("+------+------------+-----------------+-----------------+-------------------------------+-------------------" +
+-                "-------+----------------+---------+%n");
+-        for (int i = 0; i < patients.size(); i++) {
+-            if((patients.get(i).getId_card() >= intFrom) && (patients.get(i).getId_card() <= intTo)){
+-                System.out.format(leftAlignFormat, patients.get(i).getId(), patients.get(i).getName(), patients.get(i).getSurname(), patients.get(i).getFather(),
+-                        patients.get(i).getAddress(), patients.get(i).getDiagnose(), patients.get(i).getPhone(), patients.get(i).getId_card()
+-                );
+-                System.out.format("+------+------------+-----------------+-----------------+-------------------------------+-------------------" +
+-                        "-------+----------------+---------+%n");
+-            }
+-
+-        }
+-
+-    }
+-}
+Index: src/main/java/base/RandomComplete.java
+===================================================================
+diff --git a/src/main/java/base/RandomComplete.java b/src/main/java/base/RandomComplete.java
+deleted file mode 100644
+--- a/src/main/java/base/RandomComplete.java	
++++ /dev/null	
+@@ -1,59 +0,0 @@
+-package base;
+-import java.lang.*;
+-import java.util.ArrayList;
+-
+-public class RandomComplete {
+-    String[] diseases = {"ОРВІ" ,
+-            "Пневмонія" ,
+-            "Набряк" ,
+-            "Черепно-мозкова травма" ,
+-            "Серцева недостатність"};
+-
+-    String[] names = {"Петро" ,
+-            "Василь" ,
+-            "Олег" ,
+-            "Дмитро" ,
+-            "Павло" ,
+-            "Гасан" ,
+-            "Микита" ,
+-            "Ігор"};
+-
+-    String[] surnames = {"Подоляк" ,
+-            "Шматко" ,
+-            "Гришко" ,
+-            "Вольдемар" ,
+-            "Порошонявський" ,
+-            "Залізняк" ,
+-            "Жулик"};
+-
+-    String[] fathers = {"Вікторович" ,
+-            "Олегович" ,
+-            "Ганьбович" ,
+-            "Дмитрович" ,
+-            "Васильович" ,
+-            "Микитович" ,
+-            "Іванович"};
+-
+-    String[] adresses1 = {"б.Шевченка" ,
+-            "вул.Олени Пчілки" ,
+-            "провулок Сагайдачного" ,
+-            "проспект Перемоги" ,
+-            "вул.Небесної Сотні" ,
+-            "Майдан Незалежності"};
+-
+-    String[] phoneNumbers = {"095","066","075","050","099","063","076"};
+-
+-    public void randomPatients(Patient patient){
+-        patient.setId(((int) (Math.random()*100)));
+-        patient.setName(names[((int)(Math.random()*6))]);
+-        patient.setSurname(surnames[(int)(Math.random()*6)]);
+-        patient.setDiagnose(diseases[(int)(Math.random()*4)]);
+-        patient.setPhone((phoneNumbers[(int)(Math.random()*7)])+Integer.toString((int)(Math.random()*10000000)));
+-        if((patient.getPhone()).length() == 9 ){
+-            patient.setPhone(patient.getPhone()+"1");
+-        }
+-        patient.setFather(fathers[(int)(Math.random()*6)]);
+-        patient.setAddress(adresses1[(int)(Math.random()*5)]+"  "+Integer.toString((int)(Math.random()*100)) );
+-        patient.setId_card((int)(Math.random()*100));
+-    }
+-}
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	(date 1683385582296)
+@@ -1,12 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="MavenProjectsManager">
+-    <option name="originalFiles">
+-      <list>
+-        <option value="$PROJECT_DIR$/pom.xml" />
+-        <option value="$PROJECT_DIR$/target/pom.xml" />
+-      </list>
+-    </option>
++  <component name="EntryPointsManager">
++    <entry_points version="2.0" />
+   </component>
+   <component name="ProjectKey">
+     <option name="state" value="project://e2804f05-5315-4fc6-a121-c522a6c26470" />
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+--- a/.idea/modules.xml	
++++ b/.idea/modules.xml	(date 1683385582264)
+@@ -2,7 +2,7 @@
+ <project version="4">
+   <component name="ProjectModuleManager">
+     <modules>
+-      <module fileurl="file://$PROJECT_DIR$/target/lab_java.iml" filepath="$PROJECT_DIR$/target/lab_java.iml" />
++      <module fileurl="file://$PROJECT_DIR$/lab_java.iml" filepath="$PROJECT_DIR$/lab_java.iml" />
+     </modules>
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/libraries/Maven__log4j_log4j_1_2_17.xml
+===================================================================
+diff --git a/.idea/libraries/Maven__log4j_log4j_1_2_17.xml b/.idea/libraries/Maven__log4j_log4j_1_2_17.xml
+deleted file mode 100644
+--- a/.idea/libraries/Maven__log4j_log4j_1_2_17.xml	
++++ /dev/null	
+@@ -1,13 +0,0 @@
+-<component name="libraryTable">
+-  <library name="Maven: log4j:log4j:1.2.17">
+-    <CLASSES>
+-      <root url="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17.jar!/" />
+-    </CLASSES>
+-    <JAVADOC>
+-      <root url="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17-javadoc.jar!/" />
+-    </JAVADOC>
+-    <SOURCES>
+-      <root url="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17-sources.jar!/" />
+-    </SOURCES>
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/compiler.xml
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+deleted file mode 100644
+--- a/.idea/compiler.xml	
++++ /dev/null	
+@@ -1,16 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="CompilerConfiguration">
+-    <annotationProcessing>
+-      <profile name="Maven default annotation processors profile" enabled="true">
+-        <sourceOutputDir name="target/generated-sources/annotations" />
+-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+-        <outputRelativeToContentRoot value="true" />
+-        <module name="lab_java" />
+-      </profile>
+-    </annotationProcessing>
+-    <bytecodeTargetLevel>
+-      <module name="lab_java" target="8" />
+-    </bytecodeTargetLevel>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/uiDesigner.xml
+===================================================================
+diff --git a/.idea/uiDesigner.xml b/.idea/uiDesigner.xml
+deleted file mode 100644
+--- a/.idea/uiDesigner.xml	
++++ /dev/null	
+@@ -1,124 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="Palette2">
+-    <group name="Swing">
+-      <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1" />
+-      </item>
+-      <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2" />
+-      </item>
+-      <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.png" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3" />
+-      </item>
+-      <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.png" removable="false" auto-create-binding="false" can-attach-label="true">
+-        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
+-      </item>
+-      <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1" />
+-        <initial-values>
+-          <property name="text" value="Button" />
+-        </initial-values>
+-      </item>
+-      <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+-        <initial-values>
+-          <property name="text" value="RadioButton" />
+-        </initial-values>
+-      </item>
+-      <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+-        <initial-values>
+-          <property name="text" value="CheckBox" />
+-        </initial-values>
+-      </item>
+-      <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.png" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0" />
+-        <initial-values>
+-          <property name="text" value="Label" />
+-        </initial-values>
+-      </item>
+-      <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+-          <preferred-size width="150" height="-1" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+-          <preferred-size width="150" height="-1" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+-          <preferred-size width="150" height="-1" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.png" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.png" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1" />
+-      </item>
+-      <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="2" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+-          <preferred-size width="200" height="200" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.png" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+-          <preferred-size width="200" height="200" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.png" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+-      </item>
+-      <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+-      </item>
+-      <item class="javax.swing.JSeparator" icon="/com/intellij/uiDesigner/icons/separator.png" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
+-      </item>
+-      <item class="javax.swing.JProgressBar" icon="/com/intellij/uiDesigner/icons/progressbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
+-      </item>
+-      <item class="javax.swing.JToolBar" icon="/com/intellij/uiDesigner/icons/toolbar.png" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1">
+-          <preferred-size width="-1" height="20" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JToolBar$Separator" icon="/com/intellij/uiDesigner/icons/toolbarSeparator.png" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1" />
+-      </item>
+-      <item class="javax.swing.JScrollBar" icon="/com/intellij/uiDesigner/icons/scrollbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
+-      </item>
+-    </group>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/jarRepositories.xml
+===================================================================
+diff --git a/.idea/jarRepositories.xml b/.idea/jarRepositories.xml
+deleted file mode 100644
+--- a/.idea/jarRepositories.xml	
++++ /dev/null	
+@@ -1,20 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="RemoteRepositoriesConfiguration">
+-    <remote-repository>
+-      <option name="id" value="central" />
+-      <option name="name" value="Central Repository" />
+-      <option name="url" value="https://repo.maven.apache.org/maven2" />
+-    </remote-repository>
+-    <remote-repository>
+-      <option name="id" value="central" />
+-      <option name="name" value="Maven Central repository" />
+-      <option name="url" value="https://repo1.maven.org/maven2" />
+-    </remote-repository>
+-    <remote-repository>
+-      <option name="id" value="jboss.community" />
+-      <option name="name" value="JBoss Community repository" />
+-      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+-    </remote-repository>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: lab_java.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lab_java.iml b/lab_java.iml
+new file mode 100644
+--- /dev/null	(date 1683385582228)
++++ b/lab_java.iml	(date 1683385582228)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: target/pom.xml
+===================================================================
+diff --git a/target/pom.xml b/target/pom.xml
+deleted file mode 100644
+--- a/target/pom.xml	
++++ /dev/null	
+@@ -1,26 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project xmlns="http://maven.apache.org/POM/4.0.0"
+-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+-    <modelVersion>4.0.0</modelVersion>
+-
+-    <groupId>groupId</groupId>
+-    <artifactId>lab_java</artifactId>
+-    <version>1.0-SNAPSHOT</version>
+-
+-    <properties>
+-        <maven.compiler.source>8</maven.compiler.source>
+-        <maven.compiler.target>8</maven.compiler.target>
+-    </properties>
+-
+-    <dependencies>
+-        <dependency>
+-            <groupId>log4j</groupId>
+-            <artifactId>log4j</artifactId>
+-            <version>1.2.17</version>
+-        </dependency>
+-
+-    </dependencies>
+-
+-
+-</project>
+\ No newline at end of file
+Index: target/lab_java.iml
+===================================================================
+diff --git a/target/lab_java.iml b/target/lab_java.iml
+deleted file mode 100644
+--- a/target/lab_java.iml	
++++ /dev/null	
+@@ -1,13 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+-    <output url="file://$MODULE_DIR$/target/classes" />
+-    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+-    <content url="file://$MODULE_DIR$">
+-      <excludeFolder url="file://$MODULE_DIR$/target" />
+-    </content>
+-    <orderEntry type="inheritedJdk" />
+-    <orderEntry type="sourceFolder" forTests="false" />
+-    <orderEntry type="library" name="Maven: log4j:log4j:1.2.17" level="project" />
+-  </component>
+-</module>
+\ No newline at end of file
