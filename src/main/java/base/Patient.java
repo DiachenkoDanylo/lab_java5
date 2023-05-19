@@ -5,23 +5,7 @@ public class Patient {
         //Конструктор, Методи доступу, Метод toString()
     private String name, surname, father, address, diagnose, phone;
     private int id, id_card;
-    /*public Patient(int id,
-                   String name,
-                   String surname,
-                   String father,
-                   String address,
-                   int phone,
-                   int id_card,
-                   String diagnose){
-        this.id = id;
-        this.name = name;
-        this.surname = surname;
-        this.father= father;
-        this.address=address;
-        this.phone=phone;
-        this.id_card=id_card;
-        this.diagnose=diagnose;
-    }*/
+
 
     public void setAddress(String address) {
         this.address = address;

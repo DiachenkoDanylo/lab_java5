@@ -3,7 +3,6 @@ package base;
 import java.util.ArrayList;
 
 public class ViewConsole {
-    String answer;
 
     public void responseClear(){
         System.out.println("\n\n\n\n\n\n\n\n\n\n");
@@ -30,11 +29,7 @@ public class ViewConsole {
         System.out.format("+------+------------+-----------------+-----------------+-------------------------------+-------------------" +
                 "-------+----------------+---------+%n");
         for (int i = 0; i < patients.size(); i++) {
-            System.out.format(leftAlignFormat, patients.get(i).getId(), patients.get(i).getName(), patients.get(i).getSurname(), patients.get(i).getFather(),
-                    patients.get(i).getAddress(), patients.get(i).getDiagnose(), patients.get(i).getPhone(), patients.get(i).getId_card()
-            );
-            System.out.format("+------+------------+-----------------+-----------------+-------------------------------+-------------------" +
-                    "-------+----------------+---------+%n");
+            outputForTable(patients, leftAlignFormat, i);
         }
     }
 
@@ -65,14 +60,18 @@ public class ViewConsole {
                 "-------+----------------+---------+%n");
         for (int i = 0; i < patients.size(); i++) {
             if(patients.get(i).toString().indexOf(searchValue) != -1){
-            System.out.format(leftAlignFormat, patients.get(i).getId(), patients.get(i).getName(), patients.get(i).getSurname(), patients.get(i).getFather(),
-                    patients.get(i).getAddress(), patients.get(i).getDiagnose(), patients.get(i).getPhone(), patients.get(i).getId_card()
-            );
-            System.out.format("+------+------------+-----------------+-----------------+-------------------------------+-------------------" +
-                    "-------+----------------+---------+%n");
+                outputForTable(patients, leftAlignFormat, i);
             }
 
         }
+    }
+
+    private void outputForTable(ArrayList<Patient> patients, String leftAlignFormat, int i) {
+        System.out.format(leftAlignFormat, patients.get(i).getId(), patients.get(i).getName(), patients.get(i).getSurname(), patients.get(i).getFather(),
+                patients.get(i).getAddress(), patients.get(i).getDiagnose(), patients.get(i).getPhone(), patients.get(i).getId_card()
+        );
+        System.out.format("+------+------------+-----------------+-----------------+-------------------------------+-------------------" +
+                "-------+----------------+---------+%n");
     }
 
     public void viewSearchCard(ArrayList<Patient> patients, int intFrom, int intTo) {
@@ -87,11 +86,7 @@ public class ViewConsole {
                 "-------+----------------+---------+%n");
         for (int i = 0; i < patients.size(); i++) {
             if((patients.get(i).getId_card() >= intFrom) && (patients.get(i).getId_card() <= intTo)){
-                System.out.format(leftAlignFormat, patients.get(i).getId(), patients.get(i).getName(), patients.get(i).getSurname(), patients.get(i).getFather(),
-                        patients.get(i).getAddress(), patients.get(i).getDiagnose(), patients.get(i).getPhone(), patients.get(i).getId_card()
-                );
-                System.out.format("+------+------------+-----------------+-----------------+-------------------------------+-------------------" +
-                        "-------+----------------+---------+%n");
+                outputForTable(patients, leftAlignFormat, i);
             }
 
         }

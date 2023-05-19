@@ -1,18 +1,20 @@
 INFO - Creating an empty ArrayList <Patient>
 INFO -  1 was sent at console
-INFO -  6 was sent at console
-INFO - src/main/java/base/file2.txt  was used as File to SAVE a db
-INFO - End of writing a file src/main/java/base/file2.txt
-INFO -  7 was sent at console
-INFO - The using db was filled with random data from RandomComplete
-INFO -  6 was sent at console
-INFO - src/main/java/base/file2.txt  was used as File to SAVE a db
-INFO - End of writing a file src/main/java/base/file2.txt
-INFO -  1 was sent at console
+DEBUG - The ArrayList <Patient> is empty
 INFO -  5 was sent at console
 INFO - src/main/java/base/file2.txt  was used as File to create a db
 INFO - Scanner was connected to src/main/java/base/file2.txt
 INFO - Scanning file was done
 INFO - using method ParseFile to create new db from File  src/main/java/base/file2.txt
 INFO -  1 was sent at console
-INFO -  Exit
+ERROR - Wrong insert number
+ERROR - Exception: Спробуйте знову: Введіть цифру із запропонованих
+INFO -  1 was sent at console
+INFO -  7 was sent at console
+INFO - The using db was filled with random data from RandomComplete
+INFO -  1 was sent at console
+INFO -  1 was sent at console
+INFO -  6 was sent at console
+INFO - src/main/java/base/file2.txt  was used as File to SAVE a db
+INFO - End of writing a file src/main/java/base/file2.txt
+INFO - Exit
