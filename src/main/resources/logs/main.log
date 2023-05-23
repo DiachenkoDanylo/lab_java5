@@ -1,0 +1,30 @@
+INFO - Creating an empty ArrayList <Patient>
+INFO -  1 was sent at console
+DEBUG - The ArrayList <Patient> is empty
+INFO -  2 was sent at console
+DEBUG - The ArrayList <Patient> is empty
+INFO -  3 was sent at console
+DEBUG - The ArrayList <Patient> is empty
+INFO -  4 was sent at console
+DEBUG - The ArrayList <Patient> is empty
+INFO -  5 was sent at console
+INFO - src/main/java/base/file2.txt  was used as File to create a db
+INFO - Scanner was connected to src/main/java/base/file2.txt
+INFO - Scanning file was done
+INFO - using method ParseFile to create new db from File  src/main/java/base/file2.txt
+INFO -  7 was sent at console
+INFO - The using db was filled with random data from RandomComplete
+INFO -  7 was sent at console
+INFO - The using db was filled with random data from RandomComplete
+INFO - Exit
+05-23 09:46:42,775 +0300 [main] DEBUG (InitializerMy.java:120): The ArrayList <Patient> is empty
+2023-05-23 09:46:43,647 +0300 [main] INFO  (InitializerMy.java:154):  5 was sent at console
+2023-05-23 09:46:43,648 +0300 [main] INFO  (InitializerMy.java:156): src/main/java/base/file2.txt  was used as File to create a db
+2023-05-23 09:46:43,648 +0300 [main] INFO  (InitializerMy.java:163): Scanner was connected to src/main/java/base/file2.txt
+2023-05-23 09:46:43,653 +0300 [main] INFO  (InitializerMy.java:169): Scanning file was done
+2023-05-23 09:46:43,656 +0300 [main] INFO  (InitializerMy.java:174): using method ParseFile to create new db from File  src/main/java/base/file2.txt
+2023-05-23 09:46:45,658 +0300 [main] INFO  (InitializerMy.java:206):  7 was sent at console
+2023-05-23 09:46:45,660 +0300 [main] INFO  (InitializerMy.java:211): The using db was filled with random data from RandomComplete
+2023-05-23 09:46:46,546 +0300 [main] INFO  (InitializerMy.java:206):  7 was sent at console
+2023-05-23 09:46:46,547 +0300 [main] INFO  (InitializerMy.java:211): The using db was filled with random data from RandomComplete
+2023-05-23 09:46:47,428 +0300 [main] INFO  (InitializerMy.java:218): Exit

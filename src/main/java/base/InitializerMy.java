@@ -69,6 +69,7 @@ public class InitializerMy{
                         if (list.get(0).getName() == null) {
                             System.out.println("Массив пустий");
                             logger.debug("The ArrayList <Patient> is empty");
+
                         }else {
                             try {
                                 viewConsole.view2(list);
@@ -79,10 +80,11 @@ public class InitializerMy{
                                 logger.error("Index out of bounds: " + e.getMessage());
                                 System.err.println("Index out of bounds exception: " + e.getMessage());
                             }
+                        }
                                 viewConsole.responseStart();
                                 response = scanner.nextInt();
                                 viewConsole.responseClear();
-                            }
+
                             break;
 
                     case 3:
