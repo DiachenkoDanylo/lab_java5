@@ -4,11 +4,9 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.SimpleLayout;
 import org.apache.log4j.FileAppender;
+import org.json.JSONObject;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Objects;
@@ -152,7 +150,7 @@ public class Main {
                     ParseFile parsing = new ParseFile();
 
                     try {
-                        parsing.parseFile(value.toString(), list);
+                        parsing.fromFileText(value.toString(), list);
                         logger.info("using method ParseFile to create new db from File  " + pathFile);
                     } catch (Exception e) {
                         logger.error("Exception: " + e.getMessage());
@@ -202,6 +200,18 @@ public class Main {
                     scanner.close();
                     System.exit(0);
                     break;
+
+                case 11:
+                   ParseFile parseFile = new ParseFile();
+                   parseFile.toJsonFile(list);
+                   logger.info("End of writing a file " + "file222.json");
+                   viewConsole.responseStart();
+                   response = scanner.nextInt();
+                   break;
+
+
+
+
 
                 default:
                     logger.error("Wrong insert number");

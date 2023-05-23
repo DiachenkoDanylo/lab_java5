@@ -1,9 +1,14 @@
 package base;
 
+import jdk.nashorn.internal.parser.JSONParser;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.*;
 import java.util.ArrayList;
 
 public class ParseFile {
-    public void parseFile(String data, ArrayList<Patient> patients) {
+    public void fromFileText(String data, ArrayList<Patient> patients) {
         try {
             String data2 = data.replaceAll("Patient", "");
             data2 = data2.replaceAll("\\[", "");
@@ -53,4 +58,42 @@ public class ParseFile {
             System.err.println("Error parsing file data: " + e.getMessage());
         }
     }
+
+    public void toJsonFile(ArrayList<Patient> patients) throws IOException {
+        JSONArray patientsJson = new JSONArray();
+        for (int i = 0; i < patients.size(); i++) {
+            JSONObject patient = new JSONObject();
+            patient.put("id", patients.get(i).getId());
+            patient.put("name", patients.get(i).getName());
+            patient.put("surname", patients.get(i).getSurname());
+            patient.put("father", patients.get(i).getFather());
+            patient.put("address", patients.get(i).getAddress());
+            patient.put("diagnose", patients.get(i).getDiagnose());
+            patient.put("phone", patients.get(i).getPhone());
+            patient.put("id_card", patients.get(i).getId_card());
+            patientsJson.put(patient);
+        }
+        String path = "src/main/java/base/file222.json";
+        System.out.println(patientsJson.toString());
+        FileWriter fileWrite = new FileWriter(path);
+            //We can write any JSONArray or JSONObject instance to the file
+            System.out.println(patientsJson);
+            fileWrite.write(String.valueOf(patientsJson));
+            fileWrite.flush();
+            fileWrite.close();
+
+
+
+    }
+    /*public void fromJsonFile(ArrayList<Patient> patients) throws FileNotFoundException {
+        Object o = new JSONParser().parse(new FileReader("file222.json"));
+
+        JSONObject j = (JSONObject) o;
+
+        String Name = (String) j.get("id");
+
+        String College = (String ) j.get("Name");
+        */
+
+
 }

@@ -1,80 +1,17 @@
-2023-05-06 21:00:28,817 +0300 [main] INFO  (Main.java:47): Creating an empty ArrayList <Patient>
-2023-05-06 21:00:33,728 +0300 [main] INFO  (Main.java:84):  1 was sent at console
-2023-05-06 21:00:41,728 +0300 [main] INFO  (Main.java:123):  4 was sent at console
-2023-05-06 21:00:57,572 +0300 [main] INFO  (Main.java:123):  4 was sent at console
-2023-05-06 21:01:00,037 +0300 [main] DEBUG (Main.java:141): The value of  'To' cant be < 'From' 
-2023-05-06 21:02:20,605 +0300 [main] INFO  (Main.java:47): Creating an empty ArrayList <Patient>
-2023-05-06 21:02:22,257 +0300 [main] INFO  (Main.java:123):  4 was sent at console
-2023-05-06 21:02:25,825 +0300 [main] DEBUG (Main.java:141): The value of  'To' cant be < 'From' 
-2023-05-06 21:02:25,825 +0300 [main] INFO  (Main.java:123):  4 was sent at console
-2023-05-06 21:02:56,172 +0300 [main] INFO  (Main.java:211):  Exit
-2023-05-07 11:54:22,377 +0300 [main] INFO  (Main.java:47): Creating an empty ArrayList <Patient>
-2023-05-07 11:54:26,962 +0300 [main] INFO  (Main.java:84):  1 was sent at console
-2023-05-07 11:54:31,267 +0300 [main] INFO  (Main.java:195):  7 was sent at console
-2023-05-07 11:54:31,284 +0300 [main] INFO  (Main.java:200): The using db was filled with random data from RandomComplete
-2023-05-07 11:54:32,289 +0300 [main] INFO  (Main.java:195):  7 was sent at console
-2023-05-07 11:54:32,289 +0300 [main] INFO  (Main.java:200): The using db was filled with random data from RandomComplete
-2023-05-07 11:54:34,581 +0300 [main] INFO  (Main.java:195):  7 was sent at console
-2023-05-07 11:54:34,582 +0300 [main] INFO  (Main.java:200): The using db was filled with random data from RandomComplete
-2023-05-07 11:54:45,905 +0300 [main] INFO  (Main.java:179):  6 was sent at console
-2023-05-07 11:54:45,905 +0300 [main] INFO  (Main.java:181): src/base/file2.txt  was used as File to SAVE a db
-2023-05-07 11:54:45,906 +0300 [main] ERROR (Main.java:183): The File is not exist or  wrong data   src/base/file2.txt
-2023-05-07 11:55:47,951 +0300 [main] INFO  (Main.java:47): Creating an empty ArrayList <Patient>
-2023-05-07 11:55:50,221 +0300 [main] INFO  (Main.java:153):  5 was sent at console
-2023-05-07 11:55:50,221 +0300 [main] INFO  (Main.java:155): src/base/file2.txt  was used as File to create a db
-2023-05-07 11:55:50,221 +0300 [main] ERROR (Main.java:157): The File is not exist or  wrong data
-2023-05-07 11:56:48,631 +0300 [main] INFO  (Main.java:47): Creating an empty ArrayList <Patient>
-2023-05-07 11:56:50,062 +0300 [main] INFO  (Main.java:84):  1 was sent at console
-2023-05-07 11:56:50,957 +0300 [main] INFO  (Main.java:153):  5 was sent at console
-2023-05-07 11:56:50,957 +0300 [main] INFO  (Main.java:155): base/file2.txt  was used as File to create a db
-2023-05-07 11:56:50,957 +0300 [main] ERROR (Main.java:157): The File is not exist or  wrong data
-2023-05-07 11:57:45,462 +0300 [main] INFO  (Main.java:47): Creating an empty ArrayList <Patient>
-2023-05-07 11:57:46,530 +0300 [main] INFO  (Main.java:153):  5 was sent at console
-2023-05-07 11:57:46,530 +0300 [main] INFO  (Main.java:155): base/file2.txt  was used as File to create a db
-2023-05-07 11:57:46,531 +0300 [main] ERROR (Main.java:157): The File is not exist or  wrong data
-2023-05-07 11:58:02,422 +0300 [main] INFO  (Main.java:47): Creating an empty ArrayList <Patient>
-2023-05-07 11:58:03,634 +0300 [main] INFO  (Main.java:153):  5 was sent at console
-2023-05-07 11:58:03,634 +0300 [main] INFO  (Main.java:155): base/file2.txt  was used as File to create a db
-2023-05-07 11:58:03,635 +0300 [main] ERROR (Main.java:157): The File is not exist or  wrong data
-2023-05-07 11:58:21,623 +0300 [main] INFO  (Main.java:47): Creating an empty ArrayList <Patient>
-2023-05-07 11:58:22,799 +0300 [main] INFO  (Main.java:153):  5 was sent at console
-2023-05-07 11:58:22,799 +0300 [main] INFO  (Main.java:155): base/file2.txt  was used as File to create a db
-2023-05-07 11:58:22,800 +0300 [main] ERROR (Main.java:157): The File is not exist or  wrong data
-2023-05-07 11:58:54,834 +0300 [main] INFO  (Main.java:47): Creating an empty ArrayList <Patient>
-2023-05-07 11:58:55,833 +0300 [main] INFO  (Main.java:153):  5 was sent at console
-2023-05-07 11:58:55,833 +0300 [main] INFO  (Main.java:155): base/file2.txt  was used as File to create a db
-2023-05-07 11:58:55,834 +0300 [main] ERROR (Main.java:157): The File is not exist or  wrong data
-2023-05-07 11:58:55,834 +0300 [main] INFO  (Main.java:162): Scanner was connected to java.io.FileReader@4439f31e
-2023-05-07 11:58:55,835 +0300 [main] INFO  (Main.java:168): Scanning file was done
-2023-05-07 12:00:03,066 +0300 [main] INFO  (Main.java:47): Creating an empty ArrayList <Patient>
-2023-05-07 12:00:04,258 +0300 [main] INFO  (Main.java:84):  1 was sent at console
-2023-05-07 12:00:05,000 +0300 [main] INFO  (Main.java:153):  5 was sent at console
-2023-05-07 12:00:05,001 +0300 [main] INFO  (Main.java:155): src/main/java/base/file1.txt  was used as File to create a db
-2023-05-07 12:00:05,001 +0300 [main] INFO  (Main.java:162): Scanner was connected to src/main/java/base/file1.txt
-2023-05-07 12:00:05,005 +0300 [main] INFO  (Main.java:168): Scanning file was done
-2023-05-07 12:00:29,426 +0300 [main] INFO  (Main.java:47): Creating an empty ArrayList <Patient>
-2023-05-07 12:00:30,767 +0300 [main] INFO  (Main.java:153):  5 was sent at console
-2023-05-07 12:00:30,768 +0300 [main] INFO  (Main.java:155): src/main/java/base/file2.txt  was used as File to create a db
-2023-05-07 12:00:30,768 +0300 [main] INFO  (Main.java:162): Scanner was connected to src/main/java/base/file2.txt
-2023-05-07 12:00:30,786 +0300 [main] INFO  (Main.java:168): Scanning file was done
-2023-05-07 12:00:30,789 +0300 [main] INFO  (Main.java:172): using method ParseFile to create new db from File  java.io.FileReader@2ef5e5e3
-2023-05-07 12:00:36,329 +0300 [main] INFO  (Main.java:84):  1 was sent at console
-2023-05-07 12:00:37,957 +0300 [main] INFO  (Main.java:211):  Exit
-2023-05-07 12:02:07,674 +0300 [main] INFO  (Main.java:47): Creating an empty ArrayList <Patient>
-2023-05-07 12:02:08,806 +0300 [main] INFO  (Main.java:84):  1 was sent at console
-2023-05-07 12:02:13,709 +0300 [main] INFO  (Main.java:179):  6 was sent at console
-2023-05-07 12:02:13,709 +0300 [main] INFO  (Main.java:181): src/main/java/base/file2.txt  was used as File to SAVE a db
-2023-05-07 12:02:13,711 +0300 [main] INFO  (Main.java:189): End of writing a file src/main/java/base/file2.txt
-2023-05-07 12:02:17,977 +0300 [main] INFO  (Main.java:195):  7 was sent at console
-2023-05-07 12:02:17,978 +0300 [main] INFO  (Main.java:200): The using db was filled with random data from RandomComplete
-2023-05-07 12:02:18,919 +0300 [main] INFO  (Main.java:179):  6 was sent at console
-2023-05-07 12:02:18,922 +0300 [main] INFO  (Main.java:181): src/main/java/base/file2.txt  was used as File to SAVE a db
-2023-05-07 12:02:18,923 +0300 [main] INFO  (Main.java:189): End of writing a file src/main/java/base/file2.txt
-2023-05-07 12:02:20,778 +0300 [main] INFO  (Main.java:84):  1 was sent at console
-2023-05-07 12:02:22,243 +0300 [main] INFO  (Main.java:153):  5 was sent at console
-2023-05-07 12:02:22,243 +0300 [main] INFO  (Main.java:155): src/main/java/base/file2.txt  was used as File to create a db
-2023-05-07 12:02:22,244 +0300 [main] INFO  (Main.java:162): Scanner was connected to src/main/java/base/file2.txt
-2023-05-07 12:02:22,248 +0300 [main] INFO  (Main.java:168): Scanning file was done
-2023-05-07 12:02:22,250 +0300 [main] INFO  (Main.java:172): using method ParseFile to create new db from File  src/main/java/base/file2.txt
-2023-05-07 12:02:25,054 +0300 [main] INFO  (Main.java:84):  1 was sent at console
-2023-05-07 12:02:42,108 +0300 [main] INFO  (Main.java:211):  Exit
+INFO - Creating an empty ArrayList <Patient>
+INFO -  1 was sent at console
+DEBUG - The ArrayList <Patient> is empty
+INFO -  5 was sent at console
+INFO - src/main/java/base/file2.txt  was used as File to create a db
+INFO - Scanner was connected to src/main/java/base/file2.txt
+INFO - Scanning file was done
+INFO - using method ParseFile to create new db from File  src/main/java/base/file2.txt
+ERROR - Wrong insert number
+ERROR - Exception: Спробуйте знову: Введіть цифру із запропонованих
+INFO - Exit
+00 [main] INFO  (Main.java:143): Scanner was connected to src/main/java/base/file2.txt
+2023-05-23 08:33:02,412 +0300 [main] INFO  (Main.java:149): Scanning file was done
+2023-05-23 08:33:02,414 +0300 [main] INFO  (Main.java:154): using method ParseFile to create new db from File  src/main/java/base/file2.txt
+2023-05-23 08:33:04,129 +0300 [main] ERROR (Main.java:214): Wrong insert number
+2023-05-23 08:33:04,129 +0300 [main] ERROR (Main.java:233): Exception: Спробуйте знову: Введіть цифру із запропонованих
+2023-05-23 08:33:17,004 +0300 [main] INFO  (Main.java:198): Exit
